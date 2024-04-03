@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="tweetdiv"></p>
+    <script>
+        for (var i = 0; i < 8; i++){
+      alert("hello"    +i);
+        }
+      for (var i = 5; i >0; i--){
+      alert("hello"    +i);
+       };
+               var tweets = ["hello world","i am farhan ","i am a web developer", "and designer"];
+           var tweetString="";
+               for(var i=0; i<tweets.length; i++){
+                tweetString = tweetString+"<p>"+tweets[i]+"</p>"; 
+               
+               
+       };
+       document.getElementById("tweetdiv").innerHTML=tweetString;
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction test</title>
+ <style>
+    #shape{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+    #shape:hover{
+        cursor: pointer;
+    }
+ </style>
+</head>
+<body>
+     <div class="shape"></div>
+
+    <script>
+       // function plus(a,b,c,d,f,g,h){
+       //     return(a+b*9/3);
+      //  };
+ //  alert (plus(22,222,33,3));
+   var start= new Date().getTime();
+   
+       document.getElementById("shape").onclick = function() {
+        var end= new Date().getTime();
+   var timeTaken=end-start/2000;
+   alert(timeTaken); 
+        document.getElementById("shape").style.display="none";
+     }
+    </script>
+    
+</body>
+</html>

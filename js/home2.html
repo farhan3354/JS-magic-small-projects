@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="index (2).html">Request page</a>
+    <a href="home.html">Insta Like </a>
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+a {
+        list-style: none;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        padding: 20px;
+}
+body{
+    background-color: black;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#element{
+    height: 120px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+#element h1{
+    color: white;
+    font-size: 6vw;
+    position: relative;
+    z-index: 9;
+    mix-blend-mode: difference;
+    
+}
+#element img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50% -50%);
+    opacity: 0;
+    transition: all linear 1s;
+
+}
+
+</style>
+<body>
+    <div class="main">
+        <div id="element">
+            <h1>Lion</h1>
+            <img src="https://images.unsplash.com/photo-1543682704-15adeb008ac4?q=80&w=1392&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <div id="element">
+            <h1>Supra</h1>
+            <img src="https://images.unsplash.com/photo-1603811478698-0b1d6256f79a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <div id="element">
+            <h1>Instagram</h1>
+            <img src="https://images.unsplash.com/photo-1634942536790-dad8f3c0d71b?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <div id="element">
+            <h1>Iphone</h1>
+            <img src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+    </div>
+
+    <script>
+    let ele = document.querySelectorAll("#element")
+    let eleimg = document.querySelector("img")
+
+    ele.addEventListener("mousemove",function(dets){
+     eleimg.style.left = dets.x+"px"
+    //  eleimg.style.top = dets.y+"px"
+    })
+     
+    ele.forEach(function(val){
+        console.log(val.childNodes[3]);
+
+        val.addEventListener("mouseenter",function(){
+            val.childNodes[3].style.opacity = 1
+            
+        })
+        val.addEventListener("mouseleave",function(){
+            val.childNodes[3].style.opacity = 0
+        })
+        val.addEventListener("mousemove",function(dets){
+            val.childNodes[3].style.left = dets.x+"px"
+        })
+    })
+
+    ele.addEventListener("mouseenter",function(dets){
+     eleimg.style.opacity = 1
+    })
+
+    ele.addEventListener("mouseleave",function(dets){
+     eleimg.style.opacity = 0
+    })
+
+
+    </script>
+</body>
+</html>

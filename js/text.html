@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+input#input {
+    width: -webkit-fill-available;
+    height: 33px;
+    /* border: green; */
+    border: 2px solid;
+    animation: revert-layer;
+    background-color: aqua;
+    border-radius: 22px;
+    padding: 8px;
+    margin-left: inherit;
+    margin-top: 33px;
+}
+button#btn {
+    border: 2px solid;
+    border-radius: 23px;
+    margin: inherit;
+    color: indigo;
+    background: #78e22b;
+    /* size: revert-layer; */
+    font-size: x-large;
+}
+p#text1 {
+    font-size: -webkit-xxx-large;
+    color: blue;
+    font-family: cursive;
+    background-color: antiquewhite;
+}
+    </style>
+</head>
+<body>
+     <h1><center>Content changing page</center></h1>
+    <input type="text" id="input">
+    <button id="btn">click me</button>
+    <p id="text1">this is paragraph of web page</p>
+    <script> 
+    document.getElementById("btn").onclick= function(){
+        var textentered="";
+    textentered=document.getElementById("input").value;
+    document.getElementById("text1").innerHTML= textentered;
+    document.getElementById("input").style.display="none";
+    }
+    </script>
+</body>
+</html>

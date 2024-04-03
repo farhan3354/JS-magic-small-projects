@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        .circle{
+            width: 183px;
+            height: 183px;
+            float: left;
+            margin: 22px;
+            border-radius: 100px;
+        }
+        #blue-circle{
+            background-color: blue;
+        }
+        #green-circle{
+            background-color: rgb(66, 202, 38);
+
+
+        }
+        #yellow-circle{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Small project of js</center></h1>
+    <div class="circle" id="blue-circle"></div>
+
+    <div class="circle" id="yellow-circle"></div>
+    <div class="circle" id="green-circle"></div>
+<script>
+    document.getElementById("blue-circle").onclick = function(){
+        
+        document.getElementById("blue-circle").style.display="none";
+          
+        }
+        document.getElementById("yellow-circle").onclick = function(){
+        
+        document.getElementById("yellow-circle").style.display="none";
+          
+        }
+        document.getElementById("green-circle").onclick = function(){
+        
+        document.getElementById("green-circle").style.display="none";
+          
+        }
+          </script>
+</body>
+</html>

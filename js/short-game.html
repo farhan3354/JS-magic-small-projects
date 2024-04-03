@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>How many finger holding up?</p>
+<input type="text" id="gussinput">
+<button id="btn">Gusses</button>
+<script>
+    document.getElementById("btn").onclick= function(){
+        var randomNumber =Math.random();
+        randomNumber= Math.floor(randomNumber*5);
+     //  alert(randomNumber);
+          var ali="";
+        ali=document.getElementById("gussinput").value;
+      if(ali==randomNumber){
+        alert("you got it ");
+      }
+      else{
+        alert("try again");
+      }
+    }
+</script>
+</body>
+</html>

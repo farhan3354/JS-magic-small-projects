@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        
+p {
+    font-size: xxx-large;
+    font-style: oblique;
+    flood-color: initial;
+}
+input#input {
+    width: -webkit-fill-available;
+    height: 28px;
+    border-radius: 22px;
+}
+button#btn {
+    font-size: x-large;
+    border-radius: 22px;
+    margin-top: 13px;
+}
+     </style>
+</head>
+<body>
+    <p>what is your favourite web language</p>
+    <input type="text" id="input">
+    <button id="btn">Click me</button>
+    
+    <script>
+        // array in js
+        var farhan=new Array();
+        farhan[0]="love";
+        farhan[1]="i love u";
+        farhan[2]="i love three";
+      // to call array
+        farhan 
+        console.log(farhan);
+        //to delete value from array
+        //farhan.splice(0 1);
+
+        //to push some value in array
+        farhan.push('i love tea');
+
+
+        //other way to make array
+        var ali=["id:23","world","i","am farhan"];
+     //adding  value in arr
+    // var ali=["id:23","world","i","am farhan"];
+     var favouritelang="php";
+     entered="";
+    document.getElementById("btn").onclick= function(){
+    var  entered = document.getElementById("input").value;
+    if(favouritelang==entered){
+        alert(true);
+     }else{
+        alert(false);
+     }
+    
+    }
+    
+     
+    </script>
+</body>
+</html>

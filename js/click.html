@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    
+    <p id="text">this is a paragraph 1</p>
+
+    <button id="btn">click me</button>
+ <script>
+      document.getElementById("btn").onclick =function(){
+        document.getElementById("text").innerHTML ="content changed"
+    document.getElementById("btn") .onclick =function(){
+        document.getElementById("text").innerHTML="this is paragarph 1"
+        document.getElementById("btn").onclick=function(){
+            document.getElementById("text").innerHTML="content changed"
+      }
+    } 
+           }
+ </script>
+ <br>
+ <hr>
+ <div id="parent">
+    Alert button
+    <br>
+    <br>
+    <button id="button1menu">button</button>
+    <button id="button2menu">button</button>
+    </div>
+    <script>
+        document.getElementById("parent").addEventListener("click", function(e) {
+     // e.target is the clicked element
+    //check if button1menu has been clicked
+    if(e.target && e.target.id == "button1menu") {
+        alert(e.target.id + " was clicked");
+    }
+
+    //check if button2menu has been clicked
+    if(e.target && e.target.id == "button2menu") {
+        alert(e.target.id + " was clicked");
+    }
+
+  //etc
+ });
+
+</script>
+<hr>
+
+<p id="text1">javascript </p>
+<button id="btn1">Append Text</button>
+<script>
+    document.getElementById("btn1").onclick = function(){
+        document.getElementById("text1").innerHTML="yes realy!"+
+        document.getElementById("text1").innerHTML+"Very good programming language";
+    }
+</script>
+<br>
+<hr>
+<p id="empty"></p>
+<button  id="btn2">add text</button>
+<script>
+    document.getElementById("btn2").onclick = function(){
+        document.getElementById("empty").innerHTML="yes realy javascript is very good programming language!" };
+            document.getElementById("empty").style.color="aqua";
+        
+            document.getElementById("empty").style.fontSize="33px";
+            document.getElementById("empty").style.backgroundColor="green";
+      </script>
+
+</body>
+</html>
