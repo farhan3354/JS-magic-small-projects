@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">Fetching address data...</p>
+
+<script>
+    
+    const fetchdata = async() =>{
+    	try{
+        let response = await fetch("https://fakestoreapi.com/products/");
+        
+        if(!response.ok){
+        
+        throw new Error(`Error in fetching the data ${response.status}`);
+        
+        }
+        
+        let product = await response.json();
+        
+        if(product && product.length >0){
+        let productdata = product[0];
+        
+        document.getElementById("demo").innerHTML = `
+        <p>Featured Products</p>
+        <p>${productdata.id}</p>
+        <p>${productdata.title}</p>
+        <p>${productdata.price}</p>
+        <p>${productdata.description}</p>
+        `;
+        }
+        else
+        {
+               document.getElementById("demo").innerHTML = "NO Product Found";
+        }
+        }
+        catch(err){
+        console.log(err);
+        document.getElementById("demo").innerHTML = `Error came ${err}`;
+        }
+    
+    } 
+    
+    fetchdata();
+</script>
+
+</body>
+</html>

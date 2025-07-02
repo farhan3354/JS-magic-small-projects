@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">Fetching address data...</p>
+
+<script>
+    const fetchdata = async () => {
+        try {
+            let response = await fetch("https://fakerapi.it/api/v2/addresses?_quantity=1");
+
+            if (!response.ok) {
+
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            let addressData = await response.json();
+
+            if (addressData && addressData.data && addressData.data.length > 0) {
+
+                let address = addressData.data[0]; 
+
+                document.getElementById("demo").innerHTML = `
+                    <h3>Fetched Address:</h3>
+                    <p>Street: ${address.streetName}</p>
+                    <p>Building Number: ${address.buildingNumber}</p>
+                    <p>City: ${address.city}</p>
+                    <p>Postcode: ${address.postcode}</p>
+                    <p>Country: ${address.country}</p>
+                `;
+
+            }
+             else{
+                document.getElementById("demo").innerHTML = "No address found in the response data.";
+            }
+
+        }
+         catch (error) {
+            console.error("Could not fetch data:", error);
+            document.getElementById("demo").innerHTML = `Error fetching data: ${error.message}`;
+        }
+    }
+
+    fetchdata();
+</script>
+
+</body>
+</html>
